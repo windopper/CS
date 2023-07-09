@@ -88,12 +88,12 @@ class YouTubeManager {
     }
 
     public void renderVideoPage(int id) {
-        info = service.getVideoInfo(id);
+        Object info = service.getVideoInfo(id);
         // 비디오 페이지 렌더링
     }
 
     public void renderListPanel() {
-        list = service.listVideos();
+        Object list = service.listVideos();
         // 비디오 섬네일 리스트를 렌더링
     }
 

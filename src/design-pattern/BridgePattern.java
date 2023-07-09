@@ -6,7 +6,7 @@ public class BridgePattern {
 
         Radio radio = new Radio();
         remote = new AdvancedRemoteControl(radio);
-        remote.mute();
+        ((AdvancedRemoteControl) remote).mute();
     }
 }
 
@@ -62,7 +62,7 @@ class AdvancedRemoteControl extends RemoteControl {
 // 일반적으로 구현 인터페이스는 원시 작업들만 제공하는 반면
 // 추상화는 이러한 원시 작업들을 기반으로 더 상위 수준의 작업들을 정의한다
 interface Device {
-    bool isEnabled();
+    boolean isEnabled();
     void enable();
     void disable();
     int getVolume();
@@ -73,8 +73,92 @@ interface Device {
 
 class TV implements Device {
 
+    @Override
+    public boolean isEnabled() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isEnabled'");
+    }
+
+    @Override
+    public void enable() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'enable'");
+    }
+
+    @Override
+    public void disable() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'disable'");
+    }
+
+    @Override
+    public int getVolume() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getVolume'");
+    }
+
+    @Override
+    public void setVolume(int percent) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setVolume'");
+    }
+
+    @Override
+    public int getChannel() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getChannel'");
+    }
+
+    @Override
+    public void setChannel(int channel) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setChannel'");
+    }
+
 }
 
 class Radio implements Device {
+
+    @Override
+    public boolean isEnabled() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isEnabled'");
+    }
+
+    @Override
+    public void enable() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'enable'");
+    }
+
+    @Override
+    public void disable() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'disable'");
+    }
+
+    @Override
+    public int getVolume() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getVolume'");
+    }
+
+    @Override
+    public void setVolume(int percent) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setVolume'");
+    }
+
+    @Override
+    public int getChannel() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getChannel'");
+    }
+
+    @Override
+    public void setChannel(int channel) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setChannel'");
+    }
     
 }
